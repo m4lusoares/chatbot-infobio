@@ -14,7 +14,7 @@ def generate_text():
     try:
         prompt = input_text.get("1.0", tk.END).strip()  #obtem texto d entrada
         if prompt: 
-            # metodo para gerar o texto (buguei nisso)
+            # metodo para gerar o texto
             response = model.generate_content(prompt) 
             output_text.delete("1.0", tk.END)  
             output_text.insert(tk.END, response.text)  # insere resposta na área de saída
